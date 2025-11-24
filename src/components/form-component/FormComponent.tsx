@@ -1,8 +1,21 @@
+import type { FormProps } from "../../interfaces/item.interface"
 
 
 const FormComponent = () => {
+
+  const addItem = (evt: React.FormEvent) => {
+    evt.preventDefault()
+   console.log(4545649876512)
+  }
+
   return (
-    <div>FormComponent</div>
+    <form onSubmit={addItem}>
+      <input
+        type="text"
+        placeholder="Agregar..."
+      />
+      <button type="submit">Agregar</button>
+    </form>
   )
 }
 
