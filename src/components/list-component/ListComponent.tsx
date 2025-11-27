@@ -1,18 +1,29 @@
+import type { ListProps } from "../../interfaces/item.interface"
 
-function ListComponent () {
-  
-  
+function ListComponent({ arrayitems }: ListProps) {
+
+
+  console.log(arrayitems, 'soy list');
+
+
+
+
+
   return (
-  <>
-  <ul>
-    <li>item1</li>
-    <li>item2</li>
-    <li>item3</li>
-    <li>item4</li>
-    <li>item5</li>
-    <li>item6</li>
-  </ul>
-  </>
+    <>
+      <ul>
+        {arrayitems.map(item => (
+
+          <>
+            <li key={item.id}> {item.text} </li>
+          <span> {item.id} </span>
+          </>
+
+        ))}
+      </ul>
+      
+
+    </>
   )
 }
 

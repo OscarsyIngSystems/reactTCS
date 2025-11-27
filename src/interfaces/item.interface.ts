@@ -5,8 +5,12 @@ export interface Item {
 }
 
 export interface FormProps {
-    onAddItem: (item: Omit<Item,'id'> ) => void
+    onAddItem: (item: Item ) => void
 }
 
-export interface ListProps {}
+export interface ListProps {
+
+    arrayitems: Item[]
+    
+}
 
