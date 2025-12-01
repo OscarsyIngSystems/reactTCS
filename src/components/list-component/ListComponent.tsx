@@ -12,14 +12,33 @@ function ListComponent({ arrayitems }: ListProps) {
   return (
     <>
       <ul>
-        {arrayitems.map(item => (
+          {arrayitems.map( item => (
+
+
+           <>
+            <li key={item.id}  >{item.text}</li>
+            <p> {item.id}  </p>
+           </>
+          )  )}
+
+
+
+
+
+
+
+
+
+
+
+        {/* {arrayitems.map(item => (
 
           <>
             <li key={item.id}> {item.text} </li>
           <span> {item.id} </span>
           </>
 
-        ))}
+        ))} */}
       </ul>
       
 
