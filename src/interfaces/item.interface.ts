@@ -9,8 +9,7 @@ export interface FormProps {
 }
 
 export interface ListProps {
-
     arrayitems: Item[]
-    
+    onDeleteItem: (id: string) => void
 }
 
